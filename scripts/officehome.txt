@@ -1,0 +1,9 @@
+#run on one Nvidia V100
+
+python3 main.py --name 'baseline' --src 'Art' 'Clipart' 'RealWorld' --tar 'Product' ' ' --batch-size 32 --warmup-steps 0 --student-wait-steps 0 --wait_step 100 --bottleneck 'linear' --total-steps 10001 --num-classes 65 --tar_weight 1.0 --tar_threshold 0.9 --tar_alignment_weight 0.7 --src_tar_weight 0.0 --consis_tar --consis_weight 0.0 --ext_weight 0.0 --res_weight 0.01 --align_mode 1 --ext_mode 0 --seed 8 --amp --use_weight_pred --weight_tau 1.0 --port 15348
+
+python3 main.py --name 'baseline' --src 'Product' 'Clipart' 'RealWorld' --tar 'Art' ' ' --batch-size 32 --warmup-steps 0 --student-wait-steps 0 --wait_step 100 --bottleneck 'linear' --total-steps 10001 --num-classes 65 --tar_weight 1.0 --tar_threshold 0.9 --tar_alignment_weight 0.7 --src_tar_weight 0.0 --consis_tar --consis_weight 0.0 --ext_weight 0.0 --res_weight 0.01 --align_mode 1 --ext_mode 0 --seed 8 --amp --use_weight_pred --weight_tau 1.0 --port 15348
+
+python3 main.py --name 'baseline' --src 'Product' 'Art' 'RealWorld' --tar 'Clipart' ' ' --batch-size 32 --warmup-steps 0 --student-wait-steps 0 --wait_step 100 --bottleneck 'linear' --total-steps 10001 --num-classes 65 --tar_weight 1.0 --tar_threshold 0.9 --tar_alignment_weight 0.7 --src_tar_weight 0.0 --consis_tar --consis_weight 0.0 --ext_weight 0.0 --res_weight 0.01 --align_mode 1 --ext_mode 0 --seed 8 --amp --use_weight_pred --weight_tau 1.0 --port 15349
+
+python3 main.py --name 'baseline' --src 'Product' 'Clipart' 'Art' --tar 'RealWorld' ' ' --batch-size 32 --warmup-steps 0 --student-wait-steps 0 --wait_step 100 --bottleneck 'linear' --total-steps 10001 --num-classes 65 --tar_weight 1.0 --tar_threshold 0.9 --tar_alignment_weight 0.7 --src_tar_weight 0.0 --consis_tar --consis_weight 0.0 --ext_weight 0.0 --res_weight 0.01 --align_mode 1 --ext_mode 0 --seed 8 --amp --use_weight_pred --weight_tau 1.0 --port 15349
