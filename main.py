@@ -368,15 +368,6 @@ def train_loop(args, train_src_dataset, train_tar_dataset, test_loader, box_src_
             args.branch_weights = new_branch_weights
             if args.local_rank in [-1, 0]:
                 logger.info("***********************")
-                logger.info("")
-                logger.info("mean_acc:")
-                logger.info(mean_acc.avg)
-                logger.info("esm_acc:")
-                logger.info(esm_acc.avg)
-                logger.info("memory_score:")
-                logger.info(proxy1_acc.avg)
-                logger.info(ema_similar)
-                logger.info("teacher:")
                 eval_loss, top1, top5, _, label_record, label_record_num = evaluate(args, test_loader, teacher_model,
                                                                                     criterion, label_record,
                                                                                     label_record_num)
